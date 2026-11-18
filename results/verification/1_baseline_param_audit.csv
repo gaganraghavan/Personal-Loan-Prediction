@@ -1,0 +1,7 @@
+Model,Scaler in pipeline,"Params differing from sklearn defaults [default, used]"
+Perceptron,False,"{""random_state"": [""0"", ""42""]}"
+Logistic Regression,False,"{""random_state"": [""None"", ""42""]}"
+K-Means,False,"{""n_clusters"": [""8"", ""2""], ""n_init"": [""auto"", ""10""], ""random_state"": [""None"", ""42""]}"
+KNeighbors,False,{}
+SVM,False,"{""kernel"": [""rbf"", ""linear""]}"
+MLP,True,"{""random_state"": [""None"", ""42""]}"

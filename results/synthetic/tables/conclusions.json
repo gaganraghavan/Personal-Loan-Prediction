@@ -1,0 +1,35 @@
+{
+ "seeds": 5,
+ "performance_score_definition": "mean of F1, Balanced Accuracy, ROC-AUC, PR-AUC(average precision) on the synthetic test set",
+ "best_predictive_performance": "SVM",
+ "gap_to_second": 0.0018,
+ "second": "MLP",
+ "gap_smaller_than_seed_std": true,
+ "per_metric_winners": {
+  "F1": "SVM",
+  "Balanced Accuracy": "SVM",
+  "ROC-AUC": "SVM",
+  "PR-AUC": "SVM",
+  "Recall": "SVM",
+  "Precision": "KNN",
+  "Accuracy": "SVM"
+ },
+ "fastest_to_train_final_fit": "KNN",
+ "fastest_total_tuning_plus_training": "K-Means",
+ "fastest_inference_per_record": "Perceptron",
+ "smallest_model": "Logistic Regression",
+ "best_balance_rule": "among models with performance score within 0.01 of the best, the lowest mean tuning+training time",
+ "best_balance_candidates": [
+  "SVM",
+  "MLP"
+ ],
+ "best_balance": "SVM",
+ "pareto_front(perf up, tune+train time down, inference down)": [
+  "Perceptron",
+  "Logistic Regression",
+  "K-Means",
+  "KNN",
+  "SVM",
+  "MLP"
+ ]
+}

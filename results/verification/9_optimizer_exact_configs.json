@@ -1,0 +1,469 @@
+{
+  "MLP": {
+    "adam (lr=1e-3)": {
+      "estimator params": {
+        "activation": "relu",
+        "alpha": "0.0001",
+        "batch_size": "auto",
+        "beta_1": "0.9",
+        "beta_2": "0.999",
+        "early_stopping": "False",
+        "epsilon": "1e-08",
+        "hidden_layer_sizes": "(100,)",
+        "learning_rate": "constant",
+        "learning_rate_init": "0.001",
+        "max_fun": "15000",
+        "max_iter": "500",
+        "momentum": "0.9",
+        "n_iter_no_change": "10",
+        "nesterovs_momentum": "True",
+        "power_t": "0.5",
+        "random_state": "4",
+        "shuffle": "True",
+        "solver": "adam",
+        "tol": "0.0001",
+        "validation_fraction": "0.1",
+        "verbose": "False",
+        "warm_start": "False"
+      },
+      "scaler": "MinMaxScaler fitted on training split",
+      "init seeds (test eval)": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "CV": "StratifiedKFold(5, shuffle=True, random_state=42), random_state=42 estimator",
+      "max abs diff reproduced vs saved CSV (PR-AUC, F1, FP means)": 1.1102230246251565e-16,
+      "saved: iterations mean / runs hitting max_iter": [
+        386.4,
+        0
+      ]
+    },
+    "sgd+momentum (lr=1e-3)": {
+      "estimator params": {
+        "activation": "relu",
+        "alpha": "0.0001",
+        "batch_size": "auto",
+        "beta_1": "0.9",
+        "beta_2": "0.999",
+        "early_stopping": "False",
+        "epsilon": "1e-08",
+        "hidden_layer_sizes": "(100,)",
+        "learning_rate": "constant",
+        "learning_rate_init": "0.001",
+        "max_fun": "15000",
+        "max_iter": "500",
+        "momentum": "0.9",
+        "n_iter_no_change": "10",
+        "nesterovs_momentum": "True",
+        "power_t": "0.5",
+        "random_state": "4",
+        "shuffle": "True",
+        "solver": "sgd",
+        "tol": "0.0001",
+        "validation_fraction": "0.1",
+        "verbose": "False",
+        "warm_start": "False"
+      },
+      "scaler": "MinMaxScaler fitted on training split",
+      "init seeds (test eval)": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "CV": "StratifiedKFold(5, shuffle=True, random_state=42), random_state=42 estimator",
+      "max abs diff reproduced vs saved CSV (PR-AUC, F1, FP means)": 0.0,
+      "saved: iterations mean / runs hitting max_iter": [
+        437.0,
+        0
+      ]
+    },
+    "sgd+momentum (lr=1e-2)": {
+      "estimator params": {
+        "activation": "relu",
+        "alpha": "0.0001",
+        "batch_size": "auto",
+        "beta_1": "0.9",
+        "beta_2": "0.999",
+        "early_stopping": "False",
+        "epsilon": "1e-08",
+        "hidden_layer_sizes": "(100,)",
+        "learning_rate": "constant",
+        "learning_rate_init": "0.01",
+        "max_fun": "15000",
+        "max_iter": "500",
+        "momentum": "0.9",
+        "n_iter_no_change": "10",
+        "nesterovs_momentum": "True",
+        "power_t": "0.5",
+        "random_state": "4",
+        "shuffle": "True",
+        "solver": "sgd",
+        "tol": "0.0001",
+        "validation_fraction": "0.1",
+        "verbose": "False",
+        "warm_start": "False"
+      },
+      "scaler": "MinMaxScaler fitted on training split",
+      "init seeds (test eval)": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "CV": "StratifiedKFold(5, shuffle=True, random_state=42), random_state=42 estimator",
+      "max abs diff reproduced vs saved CSV (PR-AUC, F1, FP means)": 1.1102230246251565e-16,
+      "saved: iterations mean / runs hitting max_iter": [
+        422.4,
+        0
+      ]
+    },
+    "lbfgs": {
+      "estimator params": {
+        "activation": "relu",
+        "alpha": "0.0001",
+        "batch_size": "auto",
+        "beta_1": "0.9",
+        "beta_2": "0.999",
+        "early_stopping": "False",
+        "epsilon": "1e-08",
+        "hidden_layer_sizes": "(100,)",
+        "learning_rate": "constant",
+        "learning_rate_init": "0.001",
+        "max_fun": "15000",
+        "max_iter": "500",
+        "momentum": "0.9",
+        "n_iter_no_change": "10",
+        "nesterovs_momentum": "True",
+        "power_t": "0.5",
+        "random_state": "4",
+        "shuffle": "True",
+        "solver": "lbfgs",
+        "tol": "0.0001",
+        "validation_fraction": "0.1",
+        "verbose": "False",
+        "warm_start": "False"
+      },
+      "scaler": "MinMaxScaler fitted on training split",
+      "init seeds (test eval)": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "CV": "StratifiedKFold(5, shuffle=True, random_state=42), random_state=42 estimator",
+      "max abs diff reproduced vs saved CSV (PR-AUC, F1, FP means)": 0.0,
+      "saved: iterations mean / runs hitting max_iter": [
+        428.8,
+        0
+      ]
+    }
+  },
+  "LogReg": {
+    "lbfgs": {
+      "estimator params": {
+        "C": "1.0",
+        "class_weight": "None",
+        "dual": "False",
+        "fit_intercept": "True",
+        "intercept_scaling": "1",
+        "l1_ratio": "0.0",
+        "max_iter": "2000",
+        "n_jobs": "None",
+        "penalty": "deprecated",
+        "random_state": "42",
+        "solver": "lbfgs",
+        "tol": "0.0001",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "newton-cg": {
+      "estimator params": {
+        "C": "1.0",
+        "class_weight": "None",
+        "dual": "False",
+        "fit_intercept": "True",
+        "intercept_scaling": "1",
+        "l1_ratio": "0.0",
+        "max_iter": "2000",
+        "n_jobs": "None",
+        "penalty": "deprecated",
+        "random_state": "42",
+        "solver": "newton-cg",
+        "tol": "0.0001",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "newton-cholesky": {
+      "estimator params": {
+        "C": "1.0",
+        "class_weight": "None",
+        "dual": "False",
+        "fit_intercept": "True",
+        "intercept_scaling": "1",
+        "l1_ratio": "0.0",
+        "max_iter": "2000",
+        "n_jobs": "None",
+        "penalty": "deprecated",
+        "random_state": "42",
+        "solver": "newton-cholesky",
+        "tol": "0.0001",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "liblinear": {
+      "estimator params": {
+        "C": "1.0",
+        "class_weight": "None",
+        "dual": "False",
+        "fit_intercept": "True",
+        "intercept_scaling": "1",
+        "l1_ratio": "0.0",
+        "max_iter": "2000",
+        "n_jobs": "None",
+        "penalty": "deprecated",
+        "random_state": "42",
+        "solver": "liblinear",
+        "tol": "0.0001",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "sag": {
+      "estimator params": {
+        "C": "1.0",
+        "class_weight": "None",
+        "dual": "False",
+        "fit_intercept": "True",
+        "intercept_scaling": "1",
+        "l1_ratio": "0.0",
+        "max_iter": "2000",
+        "n_jobs": "None",
+        "penalty": "deprecated",
+        "random_state": "42",
+        "solver": "sag",
+        "tol": "0.0001",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "saga": {
+      "estimator params": {
+        "C": "1.0",
+        "class_weight": "None",
+        "dual": "False",
+        "fit_intercept": "True",
+        "intercept_scaling": "1",
+        "l1_ratio": "0.0",
+        "max_iter": "2000",
+        "n_jobs": "None",
+        "penalty": "deprecated",
+        "random_state": "42",
+        "solver": "saga",
+        "tol": "0.0001",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    }
+  },
+  "Perceptron": {
+    "penalty=None, eta0=0.1": {
+      "estimator params": {
+        "alpha": "0.0001",
+        "class_weight": "None",
+        "early_stopping": "False",
+        "eta0": "0.1",
+        "fit_intercept": "True",
+        "l1_ratio": "0.15",
+        "max_iter": "1000",
+        "n_iter_no_change": "5",
+        "n_jobs": "None",
+        "penalty": "None",
+        "random_state": "42",
+        "shuffle": "True",
+        "tol": "0.001",
+        "validation_fraction": "0.1",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "penalty=None, eta0=1.0": {
+      "estimator params": {
+        "alpha": "0.0001",
+        "class_weight": "None",
+        "early_stopping": "False",
+        "eta0": "1.0",
+        "fit_intercept": "True",
+        "l1_ratio": "0.15",
+        "max_iter": "1000",
+        "n_iter_no_change": "5",
+        "n_jobs": "None",
+        "penalty": "None",
+        "random_state": "42",
+        "shuffle": "True",
+        "tol": "0.001",
+        "validation_fraction": "0.1",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "penalty=l2, eta0=0.1": {
+      "estimator params": {
+        "alpha": "0.0001",
+        "class_weight": "None",
+        "early_stopping": "False",
+        "eta0": "0.1",
+        "fit_intercept": "True",
+        "l1_ratio": "0.15",
+        "max_iter": "1000",
+        "n_iter_no_change": "5",
+        "n_jobs": "None",
+        "penalty": "l2",
+        "random_state": "42",
+        "shuffle": "True",
+        "tol": "0.001",
+        "validation_fraction": "0.1",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "penalty=l2, eta0=1.0": {
+      "estimator params": {
+        "alpha": "0.0001",
+        "class_weight": "None",
+        "early_stopping": "False",
+        "eta0": "1.0",
+        "fit_intercept": "True",
+        "l1_ratio": "0.15",
+        "max_iter": "1000",
+        "n_iter_no_change": "5",
+        "n_jobs": "None",
+        "penalty": "l2",
+        "random_state": "42",
+        "shuffle": "True",
+        "tol": "0.001",
+        "validation_fraction": "0.1",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "penalty=l1, eta0=0.1": {
+      "estimator params": {
+        "alpha": "0.0001",
+        "class_weight": "None",
+        "early_stopping": "False",
+        "eta0": "0.1",
+        "fit_intercept": "True",
+        "l1_ratio": "0.15",
+        "max_iter": "1000",
+        "n_iter_no_change": "5",
+        "n_jobs": "None",
+        "penalty": "l1",
+        "random_state": "42",
+        "shuffle": "True",
+        "tol": "0.001",
+        "validation_fraction": "0.1",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "penalty=l1, eta0=1.0": {
+      "estimator params": {
+        "alpha": "0.0001",
+        "class_weight": "None",
+        "early_stopping": "False",
+        "eta0": "1.0",
+        "fit_intercept": "True",
+        "l1_ratio": "0.15",
+        "max_iter": "1000",
+        "n_iter_no_change": "5",
+        "n_jobs": "None",
+        "penalty": "l1",
+        "random_state": "42",
+        "shuffle": "True",
+        "tol": "0.001",
+        "validation_fraction": "0.1",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "penalty=elasticnet, eta0=0.1": {
+      "estimator params": {
+        "alpha": "0.0001",
+        "class_weight": "None",
+        "early_stopping": "False",
+        "eta0": "0.1",
+        "fit_intercept": "True",
+        "l1_ratio": "0.15",
+        "max_iter": "1000",
+        "n_iter_no_change": "5",
+        "n_jobs": "None",
+        "penalty": "elasticnet",
+        "random_state": "42",
+        "shuffle": "True",
+        "tol": "0.001",
+        "validation_fraction": "0.1",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    },
+    "penalty=elasticnet, eta0=1.0": {
+      "estimator params": {
+        "alpha": "0.0001",
+        "class_weight": "None",
+        "early_stopping": "False",
+        "eta0": "1.0",
+        "fit_intercept": "True",
+        "l1_ratio": "0.15",
+        "max_iter": "1000",
+        "n_iter_no_change": "5",
+        "n_jobs": "None",
+        "penalty": "elasticnet",
+        "random_state": "42",
+        "shuffle": "True",
+        "tol": "0.001",
+        "validation_fraction": "0.1",
+        "verbose": "0",
+        "warm_start": "False"
+      },
+      "max abs diff vs saved (PR-AUC, FP, FN)": 0.0
+    }
+  },
+  "LogReg solver checks": {
+    "liblinear intercept_scaling=1: max|decision_function - lbfgs|": 0.5465638466588612,
+    "liblinear intercept_scaling=1000: max|decision_function - lbfgs|": 0.09313392283226563,
+    "liblinear intercept_scaling=1e+06: max|decision_function - lbfgs|": 7.424447459705447,
+    "lbfgs: l1_ratio=0.0 vs penalty='l2' max|coef diff|": 0.0,
+    "liblinear: l1_ratio=0.0 vs penalty='l2' max|coef diff|": 0.0,
+    "saga: l1_ratio=0.0 vs penalty='l2' max|coef diff|": 1.0602770860845823e-05
+  },
+  "sklearn MLPClassifier defaults matching every setting the paper lists": {
+    "hidden_layer_sizes": "(100,)",
+    "activation": "relu",
+    "solver": "adam",
+    "alpha": "0.0001",
+    "learning_rate": "constant"
+  }
+}

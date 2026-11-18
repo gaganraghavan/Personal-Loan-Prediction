@@ -1,0 +1,18 @@
+{
+  "tuned params saved with random_state 42 for LR and MLP (== SEED)": true,
+  "reconstructed Logistic Regression (tuned) vs tuned_results.csv: max abs metric diff": 1.1102230246251565e-16,
+  "reconstructed SVM (tuned) vs tuned_results.csv: max abs metric diff": 1.1102230246251565e-16,
+  "reconstructed MLP (tuned) vs tuned_results.csv: max abs metric diff": 1.1102230246251565e-16,
+  "SVM probability=True: hard labels identical to existing tuned SVM": true,
+  "voting: predict_proba == mean of component probabilities (max abs diff)": 0.0,
+  "voting: predict == (mean probability > 0.5)": true,
+  "stacking: meta coef == manual OOF(train-only) refit, max abs diff": 0.0,
+  "stacking: meta-model n_features (3 base models, passthrough=False)": 3,
+  "stacking: meta coefficients [LR, SVM, MLP]": [
+    1.9708,
+    4.0287,
+    3.4826
+  ],
+  "stacking: meta intercept": -4.6776,
+  "best individual by train-only CV PR-AUC": "MLP"
+}

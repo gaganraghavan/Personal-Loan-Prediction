@@ -1,0 +1,26 @@
+,mean,std
+Rows,5000.0,0.0
+Class 0 rows,2500.0,0.0
+Class 1 rows,2500.0,0.0
+Violations: Age-Experience outside real range,0.0,0.0
+Violations: values outside observed range,0.0,0.0
+Mean KS/TVD synthetic vs real-train,0.012455514380530941,0.0004892838098453972
+Mean KS/TVD real-test vs real-train (floor),0.04302982116519168,0.006093318664679857
+Spearman mean abs diff class0 (syn vs real),0.022984480633186918,0.0017193437909775006
+Spearman mean abs diff class1 (syn vs real),0.02894730904659254,0.002614828373331833
+Spearman mean abs diff class0 (floor),0.030658605887273538,0.0027612568385084156
+Spearman mean abs diff class1 (floor),0.08931688873152227,0.012566926848300354
+Cohen d mean abs diff,0.02627042905044958,0.0043192940063436205
+Cohen d correlation (real vs syn),0.9989840853303822,0.0001723770213538294
+Exact duplicate rate synthetic -> real-train,0.0,0.0
+Exact duplicate rate real-test -> real-train (reference),0.0,0.0
+Detectability AUC class0: synthetic vs real-train (matched n),0.6436448724601406,0.01963486205847252
+"Detectability AUC class0: real-test vs real-train (matched n, noise floor)",0.49496082740657077,0.02735321172763133
+"Detectability AUC class0: synthetic vs real-train (larger n, up to 1000)",0.6540485,0.01881398520715373
+Detectability AUC class1: synthetic vs real-train (matched n),0.5070831024930748,0.039890995987042425
+"Detectability AUC class1: real-test vs real-train (matched n, noise floor)",0.4842188365650969,0.05310191290033149
+"Detectability AUC class1: synthetic vs real-train (larger n, up to 1000)",0.4787543386210508,0.022013477165298216
+Median nearest same-class real-train distance class0: synthetic,0.14120833304113264,0.004749636053269483
+Median nearest same-class real-train distance class0: real-test,0.0991252929184592,0.0023370532386592893
+Median nearest same-class real-train distance class1: synthetic,0.39271802890243473,0.012798032596775616
+Median nearest same-class real-train distance class1: real-test,0.3349199079701551,0.020224281642250874

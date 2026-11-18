@@ -1,0 +1,12 @@
+{
+  "scaler.data_max_/min_ equal TRAIN max/min": true,
+  "columns where full-data min/max differ from train min/max (leak would be detectable)": [],
+  "scaler.data_max_ equals FULL-data max on those columns (would indicate leak)": null,
+  "CV: Pipeline score vs manual per-fold-scaler score, max abs diff": 0.0,
+  "CV: (illustration) leaky scaler fitted on all training rows vs correct, max abs diff": 0.0012835117934504314,
+  "lines instantiating a scaler, per source file (excluding verification.py)": {
+    "preprocessing.py": [
+      38
+    ]
+  }
+}

@@ -1,0 +1,169 @@
+{
+ "42": {
+  "Perceptron": {
+   "alpha": "0.001",
+   "eta0": "1.0",
+   "max_iter": "100",
+   "penalty": "elasticnet"
+  },
+  "Logistic Regression": {
+   "C": "0.1",
+   "l1_ratio": "0.0",
+   "solver": "newton-cg"
+  },
+  "K-Means": {},
+  "KNN": {
+   "n_neighbors": "31",
+   "p": "1",
+   "weights": "distance"
+  },
+  "SVM": {
+   "C": "100",
+   "gamma": "0.1",
+   "kernel": "rbf"
+  },
+  "MLP": {
+   "solver": "adam",
+   "max_iter": "200",
+   "learning_rate_init": "0.01",
+   "hidden_layer_sizes": "(50,)",
+   "batch_size": "200",
+   "alpha": "0.01",
+   "activation": "tanh"
+  }
+ },
+ "43": {
+  "Perceptron": {
+   "alpha": "1e-05",
+   "eta0": "0.1",
+   "max_iter": "100",
+   "penalty": "elasticnet"
+  },
+  "Logistic Regression": {
+   "C": "0.1",
+   "l1_ratio": "0.0",
+   "solver": "lbfgs"
+  },
+  "K-Means": {},
+  "KNN": {
+   "n_neighbors": "31",
+   "p": "1",
+   "weights": "distance"
+  },
+  "SVM": {
+   "C": "100",
+   "gamma": "0.1",
+   "kernel": "rbf"
+  },
+  "MLP": {
+   "solver": "sgd",
+   "max_iter": "200",
+   "learning_rate_init": "0.01",
+   "hidden_layer_sizes": "(100,)",
+   "batch_size": "64",
+   "alpha": "0.0001",
+   "activation": "relu"
+  }
+ },
+ "44": {
+  "Perceptron": {
+   "alpha": "0.0001",
+   "eta0": "1.0",
+   "max_iter": "100",
+   "penalty": "l1"
+  },
+  "Logistic Regression": {
+   "C": "0.1",
+   "l1_ratio": "0.0",
+   "solver": "saga"
+  },
+  "K-Means": {},
+  "KNN": {
+   "n_neighbors": "31",
+   "p": "1",
+   "weights": "distance"
+  },
+  "SVM": {
+   "C": "100",
+   "gamma": "0.1",
+   "kernel": "rbf"
+  },
+  "MLP": {
+   "solver": "adam",
+   "max_iter": "200",
+   "learning_rate_init": "0.01",
+   "hidden_layer_sizes": "(50,)",
+   "batch_size": "200",
+   "alpha": "0.01",
+   "activation": "tanh"
+  }
+ },
+ "45": {
+  "Perceptron": {
+   "alpha": "0.0001",
+   "eta0": "0.1",
+   "max_iter": "100",
+   "penalty": "l1"
+  },
+  "Logistic Regression": {
+   "C": "0.1",
+   "l1_ratio": "0.0",
+   "solver": "lbfgs"
+  },
+  "K-Means": {},
+  "KNN": {
+   "n_neighbors": "31",
+   "p": "1",
+   "weights": "distance"
+  },
+  "SVM": {
+   "C": "10",
+   "degree": "2",
+   "gamma": "scale",
+   "kernel": "poly"
+  },
+  "MLP": {
+   "solver": "sgd",
+   "max_iter": "200",
+   "learning_rate_init": "0.01",
+   "hidden_layer_sizes": "(64, 32)",
+   "batch_size": "64",
+   "alpha": "0.01",
+   "activation": "tanh"
+  }
+ },
+ "46": {
+  "Perceptron": {
+   "alpha": "0.001",
+   "eta0": "1.0",
+   "max_iter": "100",
+   "penalty": "l1"
+  },
+  "Logistic Regression": {
+   "C": "0.1",
+   "l1_ratio": "0.0",
+   "solver": "lbfgs"
+  },
+  "K-Means": {},
+  "KNN": {
+   "n_neighbors": "31",
+   "p": "1",
+   "weights": "distance"
+  },
+  "SVM": {
+   "C": "10",
+   "degree": "2",
+   "gamma": "scale",
+   "kernel": "poly"
+  },
+  "MLP": {
+   "solver": "sgd",
+   "max_iter": "200",
+   "learning_rate_init": "0.01",
+   "hidden_layer_sizes": "(50,)",
+   "batch_size": "64",
+   "alpha": "0.0001",
+   "activation": "relu"
+  }
+ }
+}

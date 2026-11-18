@@ -1,0 +1,7 @@
+Model,Paper AUC,Paper note,Paper FP,Paper FN,Paper Accuracy,Ours ROC-AUC,Ours Accuracy,Ours FP,Ours FN
+Perceptron,0.61,predicted all zeros (text),,,,0.5891523783185841,0.904,0,96
+Logistic Regression,0.81,predicted all zeros (text),,,,0.9594280051622419,0.932,22,46
+K-Means,0.75,"text says K-Means, AUC .75, 7 FP / 72 FN",7.0,72.0,0.9,0.4683927912979352,0.519,422,59
+KNeighbors,0.75,ROC legend label 'KNeighborsClassifier' AUC .75,,,,0.8112209623893805,0.905,22,73
+SVM,0.94,linear kernel,27.0,56.0,,0.939366703539823,0.916,19,65
+MLP,0.99,after MinMax scaling; before scaling ~.93 acc / .93 AUC,9.0,11.0,0.98,0.9958863384955752,0.986,6,8

@@ -1,0 +1,18 @@
+Model,Version,max abs diff vs model_comparison.csv,y_true == test labels (seed 42 split),y_pred == (score > threshold)
+Perceptron,Baseline (paper-faithful),1.1102230246251565e-16,True,True
+Perceptron,Baseline (all scaled),1.1102230246251565e-16,True,True
+Perceptron,Tuned,1.1102230246251565e-16,True,True
+Logistic Regression,Baseline (paper-faithful),1.1102230246251565e-16,True,True
+Logistic Regression,Baseline (all scaled),1.1102230246251565e-16,True,True
+Logistic Regression,Tuned,1.1102230246251565e-16,True,True
+K-Means,Baseline (paper-faithful),1.1102230246251565e-16,True,True
+K-Means,Baseline (all scaled),5.551115123125783e-17,True,True
+KNeighbors,Baseline (paper-faithful),1.1102230246251565e-16,True,True
+KNeighbors,Baseline (all scaled),1.1102230246251565e-16,True,True
+KNeighbors,Tuned,1.1102230246251565e-16,True,True
+SVM,Baseline (paper-faithful),1.1102230246251565e-16,True,True
+SVM,Baseline (all scaled),0.0,True,True
+SVM,Tuned,2.220446049250313e-16,True,True
+MLP,Baseline (paper-faithful),2.220446049250313e-16,True,True
+MLP,Baseline (all scaled),2.220446049250313e-16,True,True
+MLP,Tuned,1.1102230246251565e-16,True,True

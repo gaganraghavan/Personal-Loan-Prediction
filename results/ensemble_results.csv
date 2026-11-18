@@ -1,0 +1,3 @@
+Model,Version,Accuracy,Precision,Recall,F1,Specificity,Balanced Accuracy,ROC-AUC,PR-AUC,FP,FN,TP,TN,Predicted positives,Fit seconds,Base models,Combination,Seed
+Soft Voting Ensemble,Extension - Soft Voting,0.989,0.956989247311828,0.9270833333333334,0.9417989417989417,0.995575221238938,0.9613292772861357,0.9925447087020649,0.9715727638149826,4,7,89,900,93,24.9,LR + SVM(probability=True) + MLP (tuned),mean of predicted probabilities (equal weights),42
+Stacking Ensemble,Extension - Stacking,0.988,0.9468085106382979,0.9270833333333334,0.9368421052631579,0.9944690265486725,0.960776179941003,0.9936969948377581,0.9744069827492527,5,7,89,899,94,120.0,LR + SVM(probability=True) + MLP (tuned),LogisticRegression meta-model on 5-fold out-of-fold probabilities,42

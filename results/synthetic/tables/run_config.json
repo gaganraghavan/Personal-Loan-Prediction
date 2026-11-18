@@ -1,0 +1,12 @@
+{
+ "seeds": [
+  42,
+  43,
+  44,
+  45,
+  46
+ ],
+ "rows_per_class": 2500,
+ "mlp_random_candidates": 8,
+ "total_runtime_s": 560.1
+}

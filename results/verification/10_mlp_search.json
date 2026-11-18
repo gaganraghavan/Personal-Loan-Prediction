@@ -1,0 +1,21 @@
+{
+  "MLP search space size (all combinations)": 2880,
+  "candidates evaluated": 30,
+  "fraction of space sampled": 0.010416666666666666,
+  "search type": "random",
+  "grid sizes of other models": {
+    "Perceptron": 64,
+    "Logistic Regression": 48,
+    "KNeighbors": 32,
+    "SVM": 26
+  },
+  "doc lines mentioning the 30-candidate search": {
+    "README.md": [
+      "Single seed-42 split for headline numbers (96 test positives, so recall has SE ~0.03); reduced MLP search (30 random candidates); default 0.5 threshold; see `SUMMARY.md`."
+    ],
+    "SUMMARY.md": [
+      "GridSearchCV (Perceptron, LogReg, KNN, SVM) and RandomizedSearchCV (MLP, 30 candidates), 5-fold stratified CV on training data, refit on PR-AUC; all CV metrics recorded. Test set used once afterwards.",
+      "6. **Optimizers:** MLP CV PR-AUC: adam .957, SGD(lr 1e-2) .952, L-BFGS .901, SGD(lr 1e-3) .793. [Interpretation] SGD depends mostly on learning rate; Adam and tuned SGD are not distinguishable. LogReg solvers: .8030\u2013.8033 except liblinear .798, i.e. essentially no solver effect on a convex objective. Perceptron configurations: CV PR-AUC .746\u2013.777, CV recall .42\u2013.76."
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+run_search signature: ['name', 'kind', 'estimator', 'space', 'Xtr', 'ytr', 'seed']
+
+baseline.py:9: def run_baselines(Xtr, ytr, Xte, yte, seed):
+baseline.py:14: m, p = evaluate(model, Xte, yte)
+baseline.py:28: Xtr, Xte, ytr, yte = split_data(X, y, seed=s)
+baseline.py:32: m, _ = evaluate(model, Xte, yte)
+experiments.py:56: Xtr, Xte, ytr, yte = split_data(X, y, seed=SEED)
+experiments.py:57: print(f"data {X.shape}, train {Xtr.shape}, test {Xte.shape}; positives train={ytr.sum()} test={yte.sum()}")
+experiments.py:58: plots.class_distribution(y, ytr, yte, PLOTS / "01_class_distribution.png")
+experiments.py:61: base_df, preds, hp = run_baselines(Xtr, ytr, Xte, yte, SEED)
+experiments.py:72: met, p = evaluate(model, Xte, yte)    # first and only contact with the test set
+experiments.py:101: mlp_opt = compare_mlp(Xtr, ytr, Xte, yte, SEED); mlp_opt.to_csv(RES / "optimizer_comparison_mlp.csv", index=False)
+experiments.py:102: lr_opt = compare_logreg(Xtr, ytr, Xte, yte, SEED); lr_opt.to_csv(RES / "optimizer_comparison_logreg.csv", index=False)
+experiments.py:103: pc_opt = compare_perceptron(Xtr, ytr, Xte, yte, SEED); pc_opt.to_csv(RES / "optimizer_comparison_perceptron.csv", index=False)
+experiments.py:112: b = baseline_estimators(s, False)["MLP"]; fit_recording(b, Xtr, ytr); mb, _ = evaluate(b, Xte, yte)
+experiments.py:113: t = clone(tuned_mlp).set_params(clf__random_state=s); fit_recording(t, Xtr, ytr); mt, _ = evaluate(t, Xte, yte)
+mlp_scaling_check.py:10: X, y = load_data(); Xtr, Xte, ytr, yte = split_data(X, y, seed=SEED); rows = []
+mlp_scaling_check.py:15: _, conv = fit_recording(m, Xtr, ytr); met, _ = evaluate(m, Xte, yte)
+optimizers.py:27: def compare_mlp(Xtr, ytr, Xte, yte, seed, init_seeds=range(5)):
+optimizers.py:42: met, _ = evaluate(m, Xte, yte)
+optimizers.py:53: def compare_logreg(Xtr, ytr, Xte, yte, seed):
+optimizers.py:59: m = mk(); secs, conv = fit_recording(m, Xtr, ytr); met, _ = evaluate(m, Xte, yte)
+optimizers.py:66: def compare_perceptron(Xtr, ytr, Xte, yte, seed):
+optimizers.py:74: m = mk(); fit_recording(m, Xtr, ytr); met, _ = evaluate(m, Xte, yte)
+plots.py:19: def class_distribution(y, ytr, yte, path):
+plots.py:22: "Test (n=%d)" % len(yte): yte.value_counts()}).T.rename(columns={0: "Declined (0)", 1: "Accepted (1)"})
+verification.py:32: X, y, Xtr, Xte, ytr, yte = _split(); rows = []
+verification.py:64: X, y, Xtr, Xte, ytr, yte = _split(); saved = json.load(open(RES / "best_hyperparameters.json"))
+verification.py:76: if "Xte" in l or "yte" in l: lines.append(f"{f.name}:{i+1}: {l.strip()}")
+verification.py:78: print("tuning.py mentions of Xte/yte:", [l for l in lines if l.startswith("tuning.py")])
+verification.py:97: X, y, Xtr, Xte, ytr, yte = _split(); preds = pickle.load(open(RES / "predictions.pkl", "rb"))
+verification.py:104: "y_true == test labels (seed 42 split)": bool((np.asarray(p["y_true"]) == yte.values).all()),
+verification.py:141: Xtr, Xte, ytr, yte = train_test_split(Xs[xk], y, test_size=.2, random_state=seed, stratify=y if strat else None)
+verification.py:147: pr = pipe.predict_proba(Xte)[:, 1]; pred = pipe.predict(Xte)
+verification.py:148: rows.append({"Variant": name, "Stratified": strat, "Seed": seed, "ROC-AUC": roc_auc_score(yte, pr),
+verification.py:149: "ROC-AUC (hard labels)": roc_auc_score(yte, pred), "Predicted positives": int(pred.sum()),
+verification.py:150: "Recall": float(pred[yte.values == 1].mean()), "ConvergenceWarning": conv})
+verification.py:164: def km_run(Xtr, ytr, Xte, yte, scale, init, n_init, mapping, seed):
+verification.py:165: if scale: s = MinMaxScaler().fit(Xtr); A, B = s.transform(Xtr), s.transform(Xte)
+verification.py:166: else: A, B = Xtr.values, Xte.values
+verification.py:171: d = km.transform(B); score = d[:, 1 - pos] - d[:, pos]; pred = (score > 0).astype(int); yt = yte.values
+verification.py:183: Xtr, Xte, ytr, yte = split_data(X, y, seed=SEED); km = KMeans(2, n_init=10, random_state=SEED).fit(Xtr.values)
+verification.py:197: Xtr, Xte, ytr, yte = split_data(X, y, seed=seed)
+verification.py:199: a, b = (Xtr.drop(columns=[drop]), Xte.drop(columns=[drop])) if drop else (Xtr, Xte)
+verification.py:200: rows.append({"Variant": name, "Seed": seed, **km_run(a, ytr, b, yte, sc, init, ni, mp, seed)})
+verification.py:207: Xtr, Xte, ytr, yte = split_data(X, y, seed=seed)
+verification.py:210: p = make_pipeline(KNeighborsClassifier(k), sc).fit(Xtr, ytr); pr = p.predict(Xte); yt = yte.values
+verification.py:212: "AUC (proba)": roc_auc_score(yt, p.predict_proba(Xte)[:, 1])})
+verification.py:219: X, y, Xtr, Xte, ytr, yte = _split(); rec = {}
+verification.py:228: m = mk_mlp(s, **kw); fit_recording(m, Xtr, ytr); met, _ = evaluate(m, Xte, yte); ms.append({**met, "n_iter": m[-1].n_iter_})
+verification.py:238: m = make_pipeline(LogisticRegression(solver=sv, C=1.0, l1_ratio=0.0, max_iter=2000, random_state=SEED), True); fit_recording(m, Xtr, ytr); met, _ = evaluate(m, Xte, yte)
+verification.py:244: m = make_pipeline(Perceptron(penalty=pen, alpha=1e-4, eta0=eta0, max_iter=1000, random_state=SEED), True); fit_recording(m, Xtr, ytr); met, _ = evaluate(m, Xte, yte)
+verification.py:249: sc = MinMaxScaler().fit(Xtr); A, B = sc.transform(Xtr), sc.transform(Xte)
+verification.py:264: fit_recording(m, Xtr, ytr); met, _ = evaluate(m, Xte, yte); rows.append({"hidden_layer_sizes": str(hl), "seed": s, **met})

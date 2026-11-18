@@ -1,0 +1,47 @@
+{
+  "implied AUC if text numbers (7 FP / 72 FN) held on a 1000-row test set, by #test positives 85..110": {
+    "85": 0.573,
+    "90": 0.596,
+    "95": 0.617,
+    "100": 0.636,
+    "105": 0.653,
+    "110": 0.669
+  },
+  "implied AUC of a single-vertex curve at the figure's KNN vertex (FPR~0.10, TPR~0.59; read by eye, +-0.02)": {
+    "central": 0.745,
+    "range": [
+      0.725,
+      0.765
+    ]
+  },
+  "unscaled feature std (what K-Means distance sees)": {
+    "Age": 11.5,
+    "Experience": 11.5,
+    "Income": 46.0,
+    "ZIP Code": 2121.9,
+    "Family": 1.1,
+    "CCAvg": 1.7,
+    "Education": 0.8,
+    "Mortgage": 101.7,
+    "Securities Account": 0.3,
+    "CD Account": 0.2,
+    "Online": 0.5,
+    "CreditCard": 0.5
+  },
+  "our K-Means seed 42: cluster sizes / train positive rate / centroid ZIP,Income": [
+    {
+      "cluster": 0,
+      "n": 2202,
+      "pos rate": 0.093,
+      "centroid ZIP": 94569.0,
+      "centroid Income": 72.1
+    },
+    {
+      "cluster": 1,
+      "n": 1798,
+      "pos rate": 0.1,
+      "centroid ZIP": 91427.0,
+      "centroid Income": 75.1
+    }
+  ]
+}
